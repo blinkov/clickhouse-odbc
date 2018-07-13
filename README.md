@@ -37,7 +37,8 @@ Install unixodbc-dev >= 2.3.0 or libiodbc2-dev
 sudo apt install unixodbc-dev
 ```
 
-## Building (Linux)
+## Building
+### Building on Linux
 
 1. At the root of source directory:
 ```bash
@@ -48,7 +49,7 @@ Please use cmake3 to build the project on CentOS 7. You can install it with `yum
 2. libclickhouseodbc.so will be at ```build/driver/libclickhouseodbc.so```
 
 
-## Building (macos):
+### Building on Mac OS
 Build with standard libiodbc:
 ```
 brew install cmake libiodbc
@@ -63,13 +64,13 @@ brew install cmake unixodbc
 mkdir -p build; cd build && cmake .. -DODBC_INCLUDE_DIRECTORIES=/usr/local/include -DODBC_LIBRARIES="/usr/local/lib/libodbc.a;/usr/local/lib/libodbcinst.a" && make -j $(nproc || sysctl -n hw.ncpu || echo 4)
 ```
 
-## Building (windows visual studio)
+### Building on Windows with Visual studio
 ```cd vs && build_vs.bat```
 
 
-## Building (windows cmake) (Developer only: setup window still not working)
+### Building on Windows with CMake
 ```md build && cd build && cmake .. -G "Visual Studio 15 2017 Win64" && cmake --build . -- /m```
-
+(Developer only: setup window still not working)
 
 ## ODBC configuration
 
